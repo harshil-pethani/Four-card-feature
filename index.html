@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <title>Frontend Mentor | Four card feature section</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            font-size: 15px;
+        }
+
+        :root {
+            --veryDarkBlue: hsl(234, 12%, 34%);
+            --grayishBlue: hsl(229, 6%, 66%);
+            --veryLightGray: hsl(0, 0%, 98%);
+            --Red: hsl(0, 78%, 62%);
+            --Cyan: hsl(180, 62%, 55%);
+            --Orange: hsl(34, 97%, 64%);
+            --Blue: hsl(212, 86%, 64%);
+        }
+
+        .attribution {
+            font-size: 11px;
+            text-align: center;
+        }
+
+        .attribution a {
+            color: hsl(228, 45%, 44%);
+        }
+        .container{
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .main-card{
+            display: flex;
+            flex-direction: column;
+            /* justify-content: center; */
+            align-items: center;
+            height: 90%;
+            width: 70%;
+            padding: 25px;
+            /* border: 2px solid black; */
+            box-shadow: 0px 0px 30px 1px var(--grayishBlue);
+        }
+
+        .first-para {
+            text-align: center;
+            color: var(--grayishBlue);
+            font-weight: 400;
+            margin-top: 15px;
+            font-size: 20px;
+        }
+
+        .second-para {
+            text-align: center;
+            color: var(--veryDarkBlue);
+            font-weight: 600;
+            margin-top: 10px;
+            font-size: 20px;
+        }
+        .info{
+            align-items: center;
+            justify-content: center;
+            width: 40%;
+            margin-top: 10px;
+        }
+
+        .third-para {
+            text-align: center;
+            color: var(--grayishBlue);
+            font-weight: 200;
+        }
+
+        .card-container{
+            margin-top: 15px;
+            display: flex;
+            /* border: 2px solid red; */
+            align-items: center;
+            height: 100%;
+            width: 90%;
+            justify-content: center;
+        }
+        .card-container-inside{
+            margin-left: 15px;
+            margin-right: 15px;
+        }
+        .second-card{
+            margin-top: 20px;
+        }
+        .card{
+            height: 200px;
+            width: 275px;
+            padding: 10px;
+            position: relative;
+            border-radius: 5px;
+            box-shadow: 5px 10px 8px var(--grayishBlue);
+        }
+        .first{
+            border-top: 4px solid var(--Cyan);
+        }
+        .second{
+            border-top: 4px solid var(--Red);
+        }
+        .third{
+            border-top: 4px solid var(--Orange);
+        }
+        .fourth{
+            border-top: 4px solid var(--Blue);
+        }
+        .card-title{
+            font-weight: 600;
+            color: var(--veryDarkBlue);
+            font-size: 18px;
+        }
+        .card-content{
+            margin-top: 10px;
+            font-weight: 200;
+            font-size: 14px;
+            color: var(--grayishBlue);
+            width: 85%;
+        }
+        .logo{
+            position: absolute;
+            right: 15px;
+            bottom: 15px;
+        }
+        @media Only Screen and (max-width:375px)
+        {
+            .container{
+                height: auto;
+            }
+            .main-card{
+                margin: auto;
+                width: 90%;
+            }
+            .info{
+                width: 90%;
+                text-align: justify;
+                margin-bottom: 30px;
+            }
+            .card{
+                margin-bottom: 25px;
+            }
+            .card-container{
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="main-card">
+            <p class="first-para">
+                Reliable, efficient delivery
+            </p>
+            <p class="second-para">
+                Powered by Technology
+            </p>
+            <div class="info">
+                <p class="third-para">
+                    Our Artificial Intelligence powered tools use millions of project data points
+                    to ensure that your project is successful
+                </p>
+            </div>
+
+            <div class="card-container">
+                <div class="card-container-inside">
+                    <div class="card first">
+                        <div class="card-title">
+                            Supervisor
+                        </div>
+                        <div class="card-content">
+                            Monitors activity to identify project roadblocks
+                        </div>
+                        <div class="logo">
+                            <img src="images/icon-supervisor.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="card-container-inside">
+                    <div class="card second">
+                        <div class="card-title">
+                            Team Builder
+                        </div>
+                        <div class="card-content">
+                            Scans our talent network to create the optimal team for your project
+                        </div>
+                        <div class="logo">
+                            <img src="images/icon-team-builder.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="card second-card third">
+                        <div class="card-title">
+                            Karma
+                        </div>
+                        <div class="card-content">
+                            Regularly evaluates our talent to ensure quality
+                        </div>
+                        <div class="logo">
+                            <img src="images/icon-karma.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="card-container-inside">
+                    <div class="card fourth">
+                        <div class="card-title">
+                            Calculator
+                        </div>
+                        <div class="card-content">
+                            Uses data from past projects to provide better delivery estimates
+                        </div>
+                        <div class="logo">
+                            <img src="images/icon-calculator.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- <footer>
+        <p class="attribution">
+            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+            Coded by <a href="#">Your Name Here</a>.
+        </p>
+    </footer> -->
+</body>
+
+</html>
